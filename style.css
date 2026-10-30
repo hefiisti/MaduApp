@@ -1,0 +1,237 @@
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 6%;
+}
+
+/* GAYA LOGO TEKS UNIK */
+.text-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #4a2511; /* Cokelat tua pekat agar kontras dengan background */
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Efek glow kuning madu di belakang teks */
+    text-shadow: 2px 2px 0px #fff, 0 0 15px rgba(209, 93, 4, 0.6);
+    transition: all 0.3s ease;
+}
+.text-logo:hover {
+    color: #d15d04;
+    transform: scale(1.05);
+}
+.text-logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d15d04;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 6% 80px 6%;
+    min-height: 70vh;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    line-height: 1.05;
+    color: #2c251d;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.btn-beli {
+    display: inline-block;
+    background-color: #d15d04;
+    color: #fff;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(209, 93, 4, 0.4);
+}
+
+.btn-beli:hover {
+    background-color: #a64903;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 95%;
+    height: auto;
+}
+
+/* BAGIAN FITUR */
+.features {
+    text-align: center;
+    padding: 40px 6% 100px 6%;
+}
+
+.features h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: #000;
+    font-weight: 700;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.card p {
+    font-weight: 800;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #111;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgba(255, 248, 225, 0.7);
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 2px solid rgba(224, 200, 151, 0.5);
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 800;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.instagram-icon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+}
+
+.tiktok-icon {
+    color: #000;
+    font-size: 1.8rem;
+}
+
+.copyright p {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* RESPONSIVE DESIGN UNTUK MOBILE */
+@media (max-width: 991px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-image {
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    .socials {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .text-logo {
+        font-size: 1.8rem;
+    }
+}
